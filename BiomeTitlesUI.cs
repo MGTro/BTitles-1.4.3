@@ -245,7 +245,10 @@ namespace BTitles
             if (Config.HideWhileBossIsAlive && bossIsAlive)
             {
                 // Hide titles if a boss is alive
-                _biomeTitle.Opacity = 0;
+                if (_biomeTitle != null)
+                {
+                    _biomeTitle.Opacity = 0;
+                }
 
                 if (_biomeSubTitle != null)
                 {
@@ -255,7 +258,10 @@ namespace BTitles
             else if (Config.HideWhileInventoryOpen && Main.playerInventory)
             {
                 // Hide titles if the inventory is open
-                _biomeTitle.Opacity = 0;
+                if (_biomeTitle != null)
+                {
+                    _biomeTitle.Opacity = 0;
+                }
 
                 if (_biomeSubTitle != null)
                 {
